@@ -143,8 +143,6 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: background-image 0.5s;
-    transition: opacity 0.5s;
     padding: 32px;
     font-size: large;
     font-weight: bold;
