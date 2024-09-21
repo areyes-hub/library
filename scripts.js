@@ -39,6 +39,7 @@ function createLib(arr) {
     for (let i = 0; i <= arr.length - 1; i++) {
         template = document.createElement("div");
         rmvBtn = document.createElement("button");
+        template.classList.add(`book-${i}`);
         template.style.display = "flex";
         template.style.justifyItems = "center";
         template.style.alignItems = "center";
@@ -52,12 +53,14 @@ function createLib(arr) {
         rmvBtn.style.padding = "4px";
         rmvBtn.style.marginLeft = "auto";
         rmvBtn.style.borderRadius = "8px";
-        rmvBtn.addEventListener("click", () => {
-            display[i].remove(template);
-        });
+        rmvBtn.setAttribute("onclick", "deleteParent(this)")
         display.appendChild(template);
         template.appendChild(rmvBtn);
     }
+}
+
+function deleteParent(button) {
+    button.parentElement.remove();
 }
 
 function viewAll() {
@@ -80,7 +83,5 @@ function addBookToLibrary() {
 addBookToLibrary();
 viewAll();
 
-
-// console.log(myLibrary);
 
 
