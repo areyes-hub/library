@@ -4,6 +4,11 @@
     appearance: none;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 legend {
     color: rgb(48, 48, 123);
     margin-bottom: 25px;
@@ -32,6 +37,8 @@ input:focus {
 }
 
 .container {
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 0% 100%;
     grid-template-rows: 100%;
@@ -39,8 +46,8 @@ input:focus {
 }
 
 .left {
-    height: 100vh;
-    width: 100%;
+    height: 100svh;
+    width: 40svw;
     padding: 25px 25px 0 0;
     display: flex;
     justify-content: center;
@@ -118,11 +125,12 @@ input:focus {
 }
 
 .right {
-    height: 100%;
-    width: 100%;
+    height: 100svh;
+    width: 100svw;
     display: grid;
+    transition: width 0.5s;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 1fr 1fr 1fr;
     background-color: rgb(244, 244, 243);
 }
 
@@ -135,6 +143,7 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 15.5dvh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: wheat;
 }
@@ -143,13 +152,15 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 60.5dvh;
+    overflow: auto;
     padding: 32px;
-    font-size: large;
+    font-size: 16px;
     font-weight: bold;
     background-image: url("lib_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.6;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(1, 1, 188);
 }
@@ -158,6 +169,7 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: start;
+    height: 15.5dvh;
 }
 
 .add-new {
